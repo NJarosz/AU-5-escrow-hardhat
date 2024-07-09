@@ -32,6 +32,7 @@ function App() {
     const value = ethers.BigNumber.from(document.getElementById('wei').value);
     const escrowContract = await deploy(signer, arbiter, beneficiary, value);
 
+    console.log("Contract Deployed to: ", escrowContract.address);
 
     const escrow = {
       address: escrowContract.address,
